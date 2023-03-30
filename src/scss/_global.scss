@@ -2,29 +2,39 @@
 // Global
 // 
 
-// Scroll padding for all scroll targets on page used with
-// native CSS smooth scrolling
-// 
-// https://caniuse.com/?search=scroll-padding
-
-html {
-    height: 100%;
-    scroll-padding-top: calc(#{$navbar-height} - 1px);
+body {
+    padding-top: $navbar-base-height;
+    color: $gray-600;
 }
 
-// Styling for page sections
-.page-section {
-    padding: 6rem 0;
-
-    .page-section-heading {
-        font-size: 2.25rem;
-        line-height: 2rem;
+@include media-breakpoint-up(lg) {
+    body {
+        padding-top: 0;
+        padding-left: $sidebar-base-width;
     }
+}
 
-    @include media-breakpoint-up(lg) {
-        .page-section-heading {
-            font-size: 3rem;
-            line-height: 2.5rem;
-        }
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+}
+
+h1 {
+    line-height: 1;
+}
+
+p.lead {
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+.subheading {
+    font-family: $headings-font-family;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
 }
